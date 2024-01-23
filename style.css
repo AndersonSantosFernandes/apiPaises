@@ -61,11 +61,35 @@ flex-direction: column;
     margin: auto;
     
     }
-    .fonte{
+    .fonte, .legenda{
         width: 90%;
         margin:10px auto;
         padding: 10px 10px;
         text-indent: 20px;
+    }
+    .asia, .america, .europa, .africa, .oceania{
+        display: flex;
+        width: 80%;
+        padding: 15px 0;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        margin: 3px auto;
+    }
+    .asia{
+        background-color: aquamarine;
+    }
+    .america{
+        background-color:burlywood;
+    }
+    .europa{
+        background-color:rgb(204, 128, 128);
+    }
+    .africa{
+        background-color:coral;
+    }
+    .oceania{
+        background-color:lawngreen;
     }
     @media(max-width:500px){
         .container{

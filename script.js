@@ -7,6 +7,7 @@ function buscarPais(nomepais) {
     function exibir1(dados1) {
         // console.clear()
         // console.log('sdsgdsfg',dados1[seletor.value])
+        const sessao = document.getElementById("main__section")
         var mostraInfo = document.getElementById("mostra__informacoes")
         mostraInfo.innerHTML =
             `
@@ -21,7 +22,29 @@ function buscarPais(nomepais) {
                 <h2>Histórico</h2>
                 <h3> ${dados1[seletor.value]['historico']}  </h3>
             `
-    }
+
+            switch (dados1[seletor.value]['localizacao']['regiao']['nome']) {
+                case "Ásia":
+                    sessao.style.backgroundColor="aquamarine"
+                    break;
+                    case "África":
+                        sessao.style.backgroundColor="coral"
+                        break;
+                        case "Europa":
+                        sessao.style.backgroundColor="rgb(204, 128, 128)"
+                        break;
+                        case "América":
+                        sessao.style.backgroundColor="burlywood"
+                        break;
+                        case "Oceania":
+                        sessao.style.backgroundColor="lawngreen"
+                        break;
+            
+                default:
+                    break;
+            }
+
+    } 
 }
 
 //Dados para o select de países
@@ -39,4 +62,10 @@ function exibir(dados) {
         `
     }
 }
+
+//Jquery par busca rápida no select
+$(document).ready(function () {
+    $('#seletor').select2();
+
+});
 
